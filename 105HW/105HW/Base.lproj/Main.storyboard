@@ -263,6 +263,7 @@
                         <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                     </view>
                     <connections>
+                        <outlet property="closeImageButton" destination="eOe-Cr-Gmb" id="vI1-Ha-Dxj"/>
                         <outlet property="images" destination="kyr-nV-gk8" id="bFg-JF-4Jo"/>
                     </connections>
                 </viewController>
