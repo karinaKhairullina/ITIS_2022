@@ -25,7 +25,7 @@ class TableViewCell: UITableViewCell {
     private let raitingLabel: UILabel = .init()
     private let actorLabel: UILabel = .init()
     private let dateLabel: UILabel = .init()
-
+    
     
     func set(serials: Serials) {
         nameLabel.text = serials.name
@@ -33,6 +33,12 @@ class TableViewCell: UITableViewCell {
         actorLabel.text = "Actor: \(serials.actor)"
         dateLabel.text = "Relise: \(serials.date)"
     }
+    
+    func infoList() -> String {
+        let infoList = "\(nameLabel.text ?? "") , Rating: \(raitingLabel.text ?? "") , Actor: \(actorLabel.text ?? "") , Relise: \(dateLabel.text ?? "")"
+        return infoList
+      }
+
     
     private func setup() {
         nameLabel.font = .boldSystemFont(ofSize: 25)        

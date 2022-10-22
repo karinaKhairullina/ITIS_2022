@@ -18,14 +18,7 @@ struct Serials {
     let date: Int
     let actor: String
     
-    public func infoList() {
-        print(" \(name)", "Raiting: \(raiting)", "Actor: \(actor)", "Relise: \(date)")
-         }
 }
-
-
-
-
 
 func getAuthors() -> [Authors] {
         [
@@ -122,7 +115,7 @@ func getSerials() -> [Serials] {
                 date: 2016,
                 actor: "Harry Hadden-Paton"
             )
-        ]
+    ]
     
 }
 

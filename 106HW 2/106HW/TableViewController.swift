@@ -72,15 +72,15 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
                     fatalError()
         }
             
-        var configuration = UIListContentConfiguration.cell()
+        var configuration = UIListContentConfiguration.valueCell()
         configuration.text = " \(authors.name) \(authors.surname)"
         configuration.image = UIImage(named: authors.portetImageView)
         configuration.imageProperties.maximumSize = CGSize(width: 100, height: 100)
-        configuration.textProperties.font = UIFont.systemFont(ofSize: 25)
+        configuration.textProperties.font = UIFont.systemFont(ofSize: 20)
             
-            if (authors.name == "Bryan" || authors.name == "Álex" || authors.name == "Laurie") {
-                configuration.secondaryText = "Best producer of my opinion!!"
-                configuration.secondaryTextProperties.font = .systemFont(ofSize: 15)
+            if (authors.name == "Mark" || authors.name == "Álex" || authors.name == "Laurie") {
+                configuration.secondaryText = "Best producer"
+                configuration.secondaryTextProperties.font = .systemFont(ofSize: 10)
     }
             cell.contentConfiguration = configuration
             return cell
@@ -111,11 +111,11 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if (indexPath.section == 1) {
-                     tableView.deselectRow(at: indexPath, animated: true)
-                     serialsList[indexPath.row].infoList()
-                 }
-        }
+            if (indexPath.section == 1) {
+                tableView.deselectRow(at: indexPath, animated: true)
+                print((tableView.cellForRow(at: indexPath) as? TableViewCell)!.infoList())
+            }
+    }
 }
 
 
